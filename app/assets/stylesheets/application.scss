@@ -10,6 +10,36 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
+ *= require material
  *= require_tree .
  *= require_self
  */
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300);
+
+$color-background: #FFFCF9;
+$color-header-background: #C9D787;
+$color-alternate-background: #FF8598;
+$color-headings: #7D8A2E;
+$color-text-highlight: #FF8598;
+
+header.mdl-layout__header--waterfall {
+	background: $color-header-background;
+	color: #FFF;
+
+	.mdl-layout-title {
+		position: absolute;
+		top: 0.815em;
+		left: 1.65em;
+		font-weight: 600;
+	}
+}
+main {
+	margin: 60px 30px 100px;
+
+	h1,h2,h3,h4,h5 {
+		color: $color-headings;
+		font-family: 'Open Sans', sans-serif;
+		font-weight: 300;
+	}
+}
