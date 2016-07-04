@@ -21,7 +21,15 @@ $color-background: #FFFCF9;
 $color-header-background: #C9D787;
 $color-alternate-background: #FF8598;
 $color-headings: #7D8A2E;
-$color-text-highlight: #FF8598;
+$color-text-highlight: #FFD8DE;
+
+html {
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.002);
+	-webkit-font-smoothing: antialiased;
+	-moz-font-smoothing: antialiased;
+	-o-font-smoothing: antialiased;
+	font-smoothing: antialiased;
+}
 
 header.mdl-layout__header--waterfall {
 	background: $color-header-background;
@@ -33,6 +41,12 @@ header.mdl-layout__header--waterfall {
 		left: 1.65em;
 		font-weight: 600;
 	}
+
+	a {
+		text-decoration: none;
+		color: $color-alternate-background;
+		margin-left: 15px;
+	}
 }
 main {
 	margin: 60px 30px 100px;
@@ -41,5 +55,21 @@ main {
 		color: $color-headings;
 		font-family: 'Open Sans', sans-serif;
 		font-weight: 300;
+	}
+}
+
+footer.mdl-mini-footer {
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	background: $color-alternate-background;
+	padding: 15px 30px;
+
+	.mdl-logo {
+		margin: 0;
+	}
+
+	a {
+		color: $color-text-highlight;
 	}
 }

@@ -1,0 +1,21 @@
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+  <header class="custom-header mdl-layout__header mdl-layout__header--waterfall">
+    <div class="mdl-layout__header-row">
+      <span class="mdl-layout-title">VideoCable</span>
+      <div class="mdl-layout-spacer"></div>
+      <nav class="mdl-navigation">
+      	<% if current_user %>
+      		Signed in as <%= current_user.email %>
+      	<% end %>
+      	<%= link_to 'Home', root_path %>
+      	<% if current_user %>
+      		<%= link_to 'Log Out', destroy_user_session_path, method: "delete"  %>
+        <% else %>
+	        <%= link_to 'Sign Up', new_user_registration_path %>
+	        <%= link_to 'Log In', new_user_session_path %>
+      	<% end %>
+      </nav>
+    </div>
+  </header>
+  </div>
+</div>
